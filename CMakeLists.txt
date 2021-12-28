@@ -1,0 +1,12 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(Projet_B)
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -g")
+
+FILE (
+  GLOB_RECURSE
+  SRC
+  src/*.cc
+  )
+SET_SOURCE_FILES_PROPERTIES(${SRC} PROPERTIES LANGUAGE CXX)
+add_executable (projet_b ${SRC})
+include_directories(${CMAKE_SOURCE_DIR}/src)
